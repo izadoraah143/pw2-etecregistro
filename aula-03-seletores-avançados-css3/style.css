@@ -1,0 +1,40 @@
+/*CSS External*/
+body {
+    font-family: "Arial";
+    background-color: #30302e;
+    color: #ffffff;
+    padding: 20px;
+    line-height: 1.6; /* é a altura da linha (distância entre as linhas) */
+}
+/* Este é um seletor de ID -> # Hashtag */
+#texto{
+    color: #8cc9e4;
+}
+
+/* Este é um seletor de CLASSE -> . Ponto */
+
+.destaque{
+    background-color: #ffd700;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #ff6347;
+    font-weight: bold;
+}
+
+.box{
+    width: 530px;
+    background-color: #3a3a38;
+    border: 2px solid #9cc9e4;
+    transition: all 0.3s ease; 
+}
+
+.box:hover{ 
+    background-color: #8cc9e4;
+    transform: scale(0.9);
+}
+
+/* :hover -> quando passa o mouse*/
+/* :focus -> quando clicar*/
+/* ::before -> adicionar antes */
+/* ::after -> adicionar depois*/
