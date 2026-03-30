@@ -1,0 +1,118 @@
+/* Configurações universais */
+*{
+    /* Todos os elementos sem margem e sem espaçamento */
+    margin: 0;
+    padding: 0;
+}
+/* Estilos gerais, geralmente fica no body */
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif; 
+    /* Vc da três opções de fonte caso o programa não ache uma delas ele vai pra próxima */
+    line-height: 1.6;
+    /* altura entre as linhas */
+    background-color: rgb(240, 232, 232);
+    color:rgb(0, 0, 0);
+}
+
+/* Estilo do CABEÇALHO */
+header{
+    background-color: rgb(61, 96, 255);
+    color:aliceblue;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1{
+    font-size: 2.5em;
+    /* Espaçamento entre as letras */
+    letter-spacing: 1px;
+}
+
+/* Menu de navegação */
+nav{
+    background-color: rgb(45, 45, 204);
+    padding: 10px; /*Espaçamento interno */
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav ul li{
+    display: inline; /*Alinhar itens um ao lado do outro, posição horizontal*/
+    margin: 0 15px; /*1º número: margem vertical, 2º número margem horizontal*/
+}
+
+nav ul li a{
+    color: white; /*Mudar a cor do link*/
+    text-decoration: none; /*remove as decorações do texto, tira a linha de baixo do link*/
+    font-weight: bold; /*Negritar o texto*/
+}
+
+/* Quando o usuário trouxer o mouse em cima do elemento, ele vai ficar sublinhado e com a cor escolhida */
+nav ul li a:hover{ /*hover:um tipo de interação do usuário com o botão, essa server só pra quando passar o mouse na palavra*/
+    text-decoration: underline;
+    color: #ff8b2d;
+}
+
+hr{
+    height: 1px;
+    background-color: #dddddd;
+    margin:30px 0; /*1º número: margem vertical, 2º número margem horizontal*/
+    border: none; /*a linha fica mais suave*/
+}
+
+/* Conteúdo principal (MAIN) */
+
+main{
+    padding:20px;
+}
+
+/* Seções (SECTION) */
+
+section h2{
+    font-size: 1.8em; /*em: um tipo de unidade de medida do css, igual px*/
+    margin-bottom: 15px;
+    color: #1e88e5;
+}
+/* Artigos (ARTICLE) */
+article{
+    background-color: white;;
+    border-radius: 6px;
+    padding: 15px; /*espaçamento interno de todos os lado*/
+    margin-bottom: 15px; /*margem inferior, entre os "cards"*/
+    border-left: 5px solid #1e88e5; /*fica uma bordinha só do lado esquerdo*/
+    /* solid: um tipo, estilo de borda */
+}
+
+article h3{
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+article p{
+    color: #555555;
+}
+
+/* Anúncio (ASIDE) */
+aside{
+    background-color: #fff3e0;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ffd180;
+    border-left: 5px solid #ffd180;
+}
+
+aside h3{
+    margin-bottom: 10px;
+    color: #ef6c00;
+}
+
+/* Rodapé (FOOTER) */
+footer{
+    background-color: #1e88e5;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
