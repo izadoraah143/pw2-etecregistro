@@ -1,0 +1,57 @@
+/* Seletor de CLASSE */
+.caixa{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    background-color: #ccc5c5;
+    border-radius: 5px;
+}
+
+.static{
+    position: static;
+    background-color: #ffd1ec;
+}
+
+.relative{
+    position: relative;
+    background-color: #ffffa6;
+    top: 50px; /* deslocamento em relação ao fluxo (posição) original */
+    left: 200px; /* deslocamento em relação ao fluxo (posição) original */
+}
+
+.absolute{
+    position:absolute;
+    background-color: #8fc9ff;
+    margin: 0;
+    top: 150px;
+    left: 50px;
+    z-index: 3;
+}
+
+.frente{
+    z-index: 2;
+    left: 60px;
+    top: 170px;
+    background-color: #cba3d4;
+}
+
+.fixed{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #a0ffcf;
+    z-index: 10000;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #eeff90;
+}
+
+.espaco{
+    height: 900px;
+    background-color: #f3e9e9;
+}
