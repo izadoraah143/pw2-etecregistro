@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    height: 250px;
+    padding: 20px;
+    background-color: rgb(255, 136, 255);
+}
+
+.card{
+    background-color: rgb(226, 43, 186);
+    padding: 20px;
+    margin: 5px;
+    color: rgb(51, 50, 50);
+    font-weight: bold;
+}
+.linha-ao-centro{
+    flex-direction: row;
+    /* Eixo horizontal  */
+    justify-content: center;
+    /* Eixo vertical */
+    align-items: center;
+}
+.coluna-a-esquerda{
+    flex-direction: column;
+    /* Eixo horizontal  */
+    align-items: flex-start;
+    /* Eixo vertical */
+    justify-content: center;
+}
+.linha-espacada{
+    flex-direction: row;
+    justify-content: space-between; /* espaça os itens fazendo com que ocupem todo o espaço disponível  */
+    align-items: center;
+}
+.quebra-linha{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* Quebra de linha qundo a janela fica com a largura menor */
+    flex-wrap: wrap;
+}
+.card-grande{
+    width: 100px;
+}
