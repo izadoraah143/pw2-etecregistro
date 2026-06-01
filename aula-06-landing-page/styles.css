@@ -23,6 +23,7 @@ body{
     position: sticky; 
     top: 0; /*coordenada do sticky*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /*ultimo num é o desfoque da sombra*/
+    z-index: 100;
 }
 
 .nav{
@@ -78,7 +79,7 @@ body{
 .btn-primary {
     background-color: #d4a574;
     color: white;
-    padding: 1rem 2 rem;
+    padding: 1rem 2rem;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -90,4 +91,151 @@ body{
 .btn-primary:hover {
     background-color: #b8935f;
     scale: 1.1;
+}
+
+/*SEÇÃO DE PRODUTOS/ CARDS DE PRODUTOS*/
+.produtos{
+    padding: 4rem 0; /*1º digito: padding vertical, auto horizontal */
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c1810;
+}
+
+/*FLEXBOX*/
+.cards { 
+    display: flex; /*o flex-box, deixa os cards lado a lado*/
+    gap: 2rem; /*espaçamento entre os itens da flex-box / 1rem = +- 16px*/
+    justify-content: center;
+    flex-wrap: wrap; /*tornar o site responsivo*/
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /*esconder oq está 'transbordando para fora do site'*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    flex: 1; /*faz com que os elementos aumentem ou diminuam de acordo com o espaço disponível*/
+    min-width: 280px;
+    max-width: 350px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /*imagem cobre todo o espaço disponível*/
+}
+
+.card-content{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-content h3{
+    color: #2c1810;
+    font-size: 1.5rem;
+}
+
+.card-content p{
+    color: #666666;
+    flex:1;
+}
+
+.price{
+    font-size: 1.5rem;
+    color: #d4a574;
+    font-weight: bold;
+}
+
+/*SEÇÃO SOBRE A EMPRESA*/
+.sobre{
+    padding: 4rem 0;
+}
+
+.sobre-flex{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-imagem{
+    flex: 1;
+}
+
+.sobre-imagem img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);;
+}
+
+.sobre-texto{
+    flex: 1; /*ativa a adaptação do elemento de acordo com o espaço, se o espaço for pequeno ele diminui e se o espaço for grande ele aumenta*/
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sobre-texto h2{
+    font-size: 2.5rem;
+    color: #2c1810;
+}
+
+.sobre-texto p{
+    color: #666666;
+    font-size: 1.1rem;
+}
+
+.beneficios{
+    list-style: none;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.beneficios li{
+    color: #2c1810;
+    font-size: 1.1rem;
+}
+
+footer{
+    background-color: #2c1810;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-section{
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4{
+    margin-bottom: 1rem;
+    color: #d4a574;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #4a3226;
 }
