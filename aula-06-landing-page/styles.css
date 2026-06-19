@@ -1,49 +1,49 @@
 /*Configurações globais*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /*o tamanho do elemento vai levar em consideração a partir da borda, desconsidera a margem como tamanho do elemento, o tamanho vai só até a borda  */
+    margin: 0; /*remove espaços externos padrão do navegador (tipo h2 já vem com argem, ai zera*/
+    padding: 0; /*remove espaçamento interno padrão*/
+    box-sizing: border-box; /*o tamanho do elemento vai levar em consideração a partir da borda, desconsidera a margem como tamanho do elemento, o tamanho vai só até a borda (faz com que o tamanho do elemento inclua padding e border) */
 }
 
 body{
     font-family: "Segoe UI";
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.6; /*espaçamento entre as linhas do texto*/
+    color: #333; /*cor padrão do texto*/
 }
 .container{
-    max-width: 1200px;
+    max-width: 1200px; /*define o limite até onde o conteúdo vai crescer*/
     margin: 0 auto; /*1º digito: margem vertical, auto: centraliza */
-    padding: 0 20px; 
+    padding: 0 20px; /*adiciona espaço interno nas laterais e evita que o texto encoste na borda da tela*/
 }
 
 .header{
     background-color: #2c1810;
     color: white;
-    padding: 1rem 0;
-    position: sticky; 
-    top: 0; /*coordenada do sticky*/
+    padding: 1rem 0; /*espaçamento interno vertical (cima/baixo)*/
+    position: sticky; /*faz o header “grudar” quando a tela rola*/
+    top: 0; /*coordenada do sticky (faz o header grudar no topo da tela)*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /*ultimo num é o desfoque da sombra*/
-    z-index: 100;
+    z-index: 100; /*faz com que o header fique por cima de todos os elementos pra quando a tela rolar ele não desaparecer*/
 }
 
 .nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /*ativa o flexbox (organiza em linha)*/
+    align-items: center; /*alinha verticalmente*/
+    justify-content: space-between; /*coloca um espaço entre os items da navbar (joga um item pra esquerda e outro pra direita)*/
 }
 .menu{
-    display: flex;
+    display: flex; /*iten lado a lado (linha)*/
     gap: 2rem; /* aumenta o espaço entre os itens da navbar */
 }
 
 .menu a{
     color: white;
-    text-decoration: none;
-    transition: color 0.5s;
+    text-decoration: none; /*remove sublinhado do link*/
+    transition: color 0.5s; /*ativa a mudança de cor e define os segs da mudança*/
 }
 
 .menu a:hover{ /*pseudo classe*/
-    color: #d4a574
+    color: #d4a574 /*faz o texto mudar de cor quando o mouse passa por cima*/
 }
 
 .logo{
@@ -55,10 +55,11 @@ body{
 
 .hero {
     background: linear-gradient(rgba(44, 24, 26, 0.7), rgba(44, 24, 26, 0.3)), url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=600&fit=crop");
-    /*colocar cor e imagem junto. Começa a cor com 70% e termina com 30% de opacidade*/
-    height: 500px;
+    /*colocar cor e imagem junto. Começa a cor com 70% e termina com 30% de opacidade - Sobrepõe cor + imagem (efeito escuro)*/
+    height: 500px; /*altura fixa*/
     background-size: cover; /*cobrir toda a parte com a imagem para não repetir*/
-    background-position: center;
+    background-position: center; /*centraliza a imagem*/
+    /*centraliza tudo no meio, tanto vertical como horizontal*/
     color: white;
     display: flex;
     align-items: center;
@@ -79,18 +80,18 @@ body{
 .btn-primary {
     background-color: #d4a574;
     color: white;
-    padding: 1rem 2rem;
-    border: none;
+    padding: 1rem 2rem; /*espaçamento inteno*/
+    border: none; /*sem borda*/
     border-radius: 5px;
     font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.5s;
-    transition: scale 0.5s;
+    cursor: pointer; /*aciona a "mãozinha" quando passa por cima do botão*/
+    transition: background-color 0.5s; /*faz mudar a cor de fundo quando o cursor passa por cima e define em quantos segs isso acontece*/
+    transition: scale 0.5s; /*faz o botão aumentar quando passa o cursor por cima e define em quantos segs isso aconetce*/
 }
 
 .btn-primary:hover {
-    background-color: #b8935f;
-    scale: 1.1;
+    background-color: #b8935f; /*a cor de fundo que fica quando o cursor passa*/
+    scale: 1.1; /*quanto ele aumenta*/
 }
 
 /*SEÇÃO DE PRODUTOS/ CARDS DE PRODUTOS*/
@@ -108,10 +109,10 @@ body{
 
 /*FLEXBOX*/
 .cards { 
-    display: flex; /*o flex-box, deixa os cards lado a lado*/
-    gap: 2rem; /*espaçamento entre os itens da flex-box / 1rem = +- 16px*/
+    display: flex; /*o flex-box, deixa os cards lado a lado (linha)*/
+    gap: 2rem; /*espaçamento entre os itens da flex-box (espaçamento entre os cards)/ 1rem = +- 16px*/
     justify-content: center;
-    flex-wrap: wrap; /*tornar o site responsivo*/
+    flex-wrap: wrap; /*tornar o site responsivo (quebra linha quando falta espaço)*/
 }
 
 .card {
@@ -120,26 +121,26 @@ body{
     overflow: hidden; /*esconder oq está 'transbordando para fora do site'*/
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     flex: 1; /*faz com que os elementos aumentem ou diminuam de acordo com o espaço disponível*/
-    min-width: 280px;
-    max-width: 350px;
-    transition: transform 0.3s;
+    min-width: 280px; /*define tamanho mínimo que ele pode ter (por causa do flex 1 que deixa o espaçamento flexível)*/
+    max-width: 350px; /*define o tamanho máximo que ele pode ter*/
+    transition: transform 0.3s; /*faz com que o card suba ao passar o mouse por cima*/
 }
 
 .card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px); /*define pra que direção ele vai (eixo y, para cima porque o núm é negativo)*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /*aumenta um pouquinho a sombra*/
 }
 
 .card img{
     width: 100%;
     height: 200px;
-    object-fit: cover; /*imagem cobre todo o espaço disponível*/
+    object-fit: cover; /*imagem cobre todo o espaço disponível, ela não distorce*/
 }
 
 .card-content{
     padding: 1.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*organiza o conteúdo do card em coluna*/
     gap: 0.5rem;
 }
 
@@ -150,7 +151,7 @@ body{
 
 .card-content p{
     color: #666666;
-    flex:1;
+    flex:1; /*faz com que os elementos aumentem ou diminuam de acordo com o espaço disponível*/
 }
 
 .price{
@@ -165,13 +166,13 @@ body{
 }
 
 .sobre-flex{
-    display: flex;
-    gap: 3rem;
+    display: flex; /*organiza o texto e a imagem lado a lado*/
+    gap: 3rem; /*espaço entre eles*/
     align-items: center;
 }
 
 .sobre-imagem{
-    flex: 1;
+    flex: 1; /*torna o tamanho flexível*/
 }
 
 .sobre-imagem img{
@@ -183,7 +184,7 @@ body{
 .sobre-texto{
     flex: 1; /*ativa a adaptação do elemento de acordo com o espaço, se o espaço for pequeno ele diminui e se o espaço for grande ele aumenta*/
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*organiza em coluna*/
     gap: 1rem;
 }
 
@@ -198,10 +199,10 @@ body{
 }
 
 .beneficios{
-    list-style: none;
+    list-style: none; /*remove as bolinhas da lista*/
     margin-top: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*organiza em coluna*/
     gap: 0.5rem;
 }
 
@@ -217,15 +218,15 @@ footer{
 }
 
 .footer-content{
-    display: flex;
-    justify-content: space-between;
+    display: flex; /*organiza em linha*/
+    justify-content: space-between; /*coloca um espaço entre os elemnetos*/
     gap: 2rem;
     margin-bottom: 2rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*layout flexível, se adapata ao tamanho da tela*/
 }
 
 .footer-section{
-    flex: 1;
+    flex: 1; /*torna o espaço de cada "seção"/ conjunto de conteúdos do footer adaptável de acordo com o espaço*/
     min-width: 200px;
 }
 
@@ -237,5 +238,5 @@ footer{
 .footer-bottom{
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid #4a3226;
+    border-top: 1px solid #4a3226; /*coloca uma linhazinha pra separar as coisas*/
 }
