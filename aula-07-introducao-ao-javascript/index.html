@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07 - Introdução ao JavaScript</title>
+</head>
+<body>
+    <h1>Introdução ao JavaScript</h1>
+    
+</body>
+
+<!-- JAVASCRIPT -->
+ <!-- o scrip é feito no final pq o navegador lê
+  de cima para baixo e o navegador demora para
+   carregar o site pq carrega primeiro o html e
+    css e depois o java scrip, ai não demora -->
+<script>
+    // Dispara uma janela de ALERTA 
+    // Captura o elemento Window (janela do navegador) da árvore DOM -manipulação da árvore DOM- e chama a função alert
+    window.alert('Bem-vindo ao meu primeiro site com JavaScript!')
+
+    //Dispara uma janela de CONFIRMAÇÃO 
+    window.confirm('Vamos começar a aprender sobre variáveis?')
+
+    // ARMAZENANDO O NOME DO USUÁRIO EM UMA VARIÁVEL 
+    // PROMPT - mostra uma janela de capturação/ inserção de dados
+    const nome = window.prompt('Qual é o seu nome?')
+    let idade = window.prompt('Qual sua idade?')
+
+    // ESCREVENDO NO SITE
+    document.write('Olá ' + nome + '! Vamos aprender sobre variáveis! ')
+    document.write('<br>') // quebrar linha
+    document.write('Sua idade é: ' + idade  + ' anos')
+</script>
+</html>
