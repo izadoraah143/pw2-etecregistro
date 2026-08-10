@@ -15,8 +15,9 @@
   de cima para baixo e o navegador demora para
    carregar o site pq carrega primeiro o html e
     css e depois o java scrip, ai não demora -->
+
 <script>
-    // Dispara uma janela de ALERTA 
+    // window.alert('') -> dispara uma janela de ALERTA 
     // Captura o elemento Window (janela do navegador) da árvore DOM -manipulação da árvore DOM- e chama a função alert
     window.alert('Bem-vindo ao meu primeiro site com JavaScript!')
 
@@ -24,13 +25,27 @@
     window.confirm('Vamos começar a aprender sobre variáveis?')
 
     // ARMAZENANDO O NOME DO USUÁRIO EM UMA VARIÁVEL 
-    // PROMPT - mostra uma janela de capturação/ inserção de dados
+    // PROMPT - mostra uma janela de capturação/inserção de dados
     const nome = window.prompt('Qual é o seu nome?')
     let idade = window.prompt('Qual sua idade?')
 
     // ESCREVENDO NO SITE
-    document.write('Olá ' + nome + '! Vamos aprender sobre variáveis! ')
-    document.write('<br>') // quebrar linha
-    document.write('Sua idade é: ' + idade  + ' anos')
+
+    //CONCATENAÇÃO COMUM
+    // document.write('Olá ' + nome + '! Vamos aprender sobre variáveis! ');
+    // document.write('<br>'); // quebrar linha
+    //document.write("Sua idade é: " + idade + " anos");
+
+     //CONCATENAÇÃO (TEMPLATE STRINGS)
+    document.write(`Olá ${nome}! Vamos aprender sobre variáveis! <br>`);
+    document.write(`Sua idade é: ${idade} anos <br>`);
+
+    //CONVERSÃO DE DADOS
+    const n1 = Number (window.prompt('Digite um número: ')); //Tranforma a variável de string para número (Number) - TipoVariavel(NomeVariavel)
+    const n2 = Number (window.prompt('Digite outro número: ')); //Converte na declaração da variável ou no momento que fizer a operação (melhor na declaração)
+    const resultado = n1 + n2;  //Não precisa declarar nos dois lugares 
+    document.write(`A soma de ${n1} + ${n2} é igual a: ${resultado} <br>`)
+
 </script>
+
 </html>
