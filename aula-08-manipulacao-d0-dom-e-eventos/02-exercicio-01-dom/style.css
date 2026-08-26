@@ -1,4 +1,47 @@
-div {
+* {
+    background-color: rgb(255, 255, 255);
+}
+
+#yellow{
+    background-color: gray;
     border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+#red{
+    background-color: gray;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+#green{
+    background-color: gray;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 90px;
+    height: 30px;
+    border-radius: 10%;
+}
+
+.semaforo {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
