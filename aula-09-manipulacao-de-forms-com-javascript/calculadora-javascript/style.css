@@ -1,0 +1,36 @@
+*{
+    
+}
+body {
+    font: normal 18pt Arial;
+}
+
+input {
+    font: normal 18pt Arial;
+    width: 100px;
+    border-radius: 10px;
+}
+
+div#resultado {
+    margin-top: 10px;
+    font-weight: 600;
+    /* deixa o texto negrito - font-weight:*/
+}
+
+button#operacao{
+    background-color: pink;
+    color: black;
+    width: 80px;
+    height: 80px;
+    font: normal 18pt Arial;
+    border-radius: 10px;
+}
+
+button#limpar {
+    background-color: pink;
+    color: black;
+    width: 200px;
+    height: 60px;
+    font: normal 18pt Arial;
+    border-radius: 10px;
+}

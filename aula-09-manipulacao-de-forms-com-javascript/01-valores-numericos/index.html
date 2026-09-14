@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Importação do css-->
+    <link rel="stylesheet" href="style.css">
+    <title>Manipulação de Formulários com Javascript</title>
+</head>
+<body>
+    <h1>Calculadora com Javascript</h1>
+    <!-- min="x" e max="x"- indica o valor mínimo e máximo que o número pode ter -->
+    <input type="number" name="inputN1" id="inputN1" min="0" max="999">
+    <input type="number" name="inputN2" id="inputN2" min="0" max="999">
+    <br>
+    <br>
+    <!--onclick="somar()" - chama a função somar quando clicar nele -->
+    <button type="button" onclick="somar()">Somar</button>
+    <button type="button" onclick="subtracao()">Subtrair</button>
+    <button type="button" onclick="multiplicacao()">Multiplicar</button>
+    <button type="button" onclick="divisao()">Dividir</button>
+    <br>
+
+    <!-- Botão de limpar-->
+     <button type="button" onclick="limpar()">Limpar</button>
+
+
+    <!-- Resultado -->
+     <div id="resultado">=</div>
+
+    <!--Importação do Javascript-->
+    <script src="script.js"></script>
+</body>
+</html>
