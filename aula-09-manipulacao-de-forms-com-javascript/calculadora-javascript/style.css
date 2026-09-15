@@ -1,8 +1,7 @@
-*{
-    
-}
 body {
     font: normal 18pt Arial;
+    align-items: center;
+    background-color: rgb(194, 194, 194);
 }
 
 input {
@@ -18,7 +17,7 @@ div#resultado {
 }
 
 button#operacao{
-    background-color: pink;
+    background-color:  RGB(62, 214, 137);
     color: black;
     width: 80px;
     height: 80px;
@@ -27,10 +26,37 @@ button#operacao{
 }
 
 button#limpar {
-    background-color: pink;
+    background-color:  RGB(62, 214, 137);
     color: black;
     width: 200px;
     height: 60px;
     font: normal 18pt Arial;
     border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+div#caixas {
+    display: flex;
+    gap: 15px;
+}
+
+div#operacoes {
+    display: flex;
+    gap: 15px;
+}
+
+div#formato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: RGB(247, 168, 184);
+    height: 33rem;
+    width: 28rem;
+    padding: 20px;
+    border-radius: 50px;
+    border: 3px solid #000000;
+    text-align: center;
 }

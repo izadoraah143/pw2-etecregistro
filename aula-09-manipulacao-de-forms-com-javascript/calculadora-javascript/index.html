@@ -8,17 +8,22 @@
     <title>Manipulação de Formulários com Javascript</title>
 </head>
 <body>
+    <div id="formato">
     <h1>Calculadora com Javascript</h1>
     <!-- min="x" e max="x"- indica o valor mínimo e máximo que o número pode ter -->
-    <input type="number" name="inputN1" id="inputN1" min="0" max="999">
-    <input type="number" name="inputN2" id="inputN2" min="0" max="999">
+    <div id="caixas">
+        <input type="number" name="inputN1" id="inputN1" min="0" max="999">
+        <input type="number" name="inputN2" id="inputN2" min="0" max="999"> 
+    </div>
     <br>
     <br>
     <!--onclick="somar()" - chama a função somar quando clicar nele -->
+    <div id="operacoes">
     <button type="button" id="operacao" onclick="somar()">+</button>
     <button type="button" id="operacao" onclick="subtracao()">-</button>
     <button type="button" id="operacao" onclick="multiplicacao()">x</button>
     <button type="button" id="operacao" onclick="divisao()">÷</button>
+    </div>
     <br>
     <br>
 
@@ -28,6 +33,7 @@
 
     <!-- Resultado -->
      <div id="resultado">=</div>
+     </div>
 
     <!--Importação do Javascript-->
     <script src="script.js"></script>
