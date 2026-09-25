@@ -8,7 +8,7 @@ const titulo = window.document.getElementsByTagName('h1')[0]
 
 titulo.innerText = "Fui alterado pelo JavaScript TT" 
 // Altera o conteúdo do título
-// Poderia ser usado para alterar o título quando o usuário fizer detyerminada coisa
+// Poderia ser usado para alterar o título quando o usuário fizer determinada coisa
 
 titulo.style.color = 'yellow'
 // Altera a cor do título
