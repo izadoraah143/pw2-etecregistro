@@ -1,0 +1,145 @@
+body {
+    background-color: rgb(51, 55, 85);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font: normal 18pt Arial;
+}
+
+div#caixaBranca {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    height: 35rem;
+    width: 30rem;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    gap: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div#formato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button#verificar {
+    background-color: blue;
+    height: 30px;
+    width: 40px;
+}
+
+#titulo {
+    color: white;
+    font-size: 28px;
+    margin-top: 50px;
+}
+
+#texto {
+    color: rgb(97, 95, 95);
+    font-size: 17px;
+    margin-left: 25px;
+}
+
+#Verificar {
+    background-color: rgb(68, 68, 189);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 27rem;
+    border: 1px solid #b1b1b1;
+    font-size: 18px;
+    align-self: center;
+}
+
+#inputCPU {
+    color: rgb(8, 8, 8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 25.5rem;
+    border: 1px solid #b1b1b1;
+    align-self: center;
+    margin-top: -25px;
+}
+
+#inputMemoria {
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    width: 25.5rem;
+    border: 1px solid #b1b1b1;
+    align-self: center;
+    margin-top: -25px;
+}
+
+#inputTemp {
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    width: 25.5rem;
+    border: 1px solid #b1b1b1;
+    align-self: center;
+    margin-top: -25px;
+}
+
+
+#retornos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35rem;
+    width: 30rem;
+    color: white;
+    gap: 30px;
+    text-align: center;
+   
+}
+#retornoCPU {
+    background-color:  rgb(248, 248, 248);
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    height: 26px;
+    width: 28.8rem;
+    border: 1px;
+     font-size: 20px;
+}
+
+#retornoMemoria {
+    background-color:  rgb(248, 248, 248);
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    height: 26px;
+    width: 28.8rem;
+    border: 1px;
+     font-size: 20px;
+}
+
+#retornoTemp {
+    background-color:  rgb(248, 248, 248);
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    height: 26px;
+    width: 28.8rem;
+    border: 1px;
+    font-size: 20px;
+}
+
+#reiniciar {
+    background-color: rgb(248, 84, 84);
+    border-radius: 8px;
+    padding: 10px;
+    height: 45px;
+    width: 30rem;
+    border: 1px;
+    font-size: 19px;
+    color: white;
+}
+
+
+
