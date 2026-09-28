@@ -75,10 +75,13 @@ function verificarTemp() {
 }
 
 function reiniciarServ() {
-    inputCUP.value = "";
-    inputMemoria.value = "";
-    inputTemp.value = "";
+    inputCUP.innerText = "CPU:";
+    inputMemoria.innerText = "Memória:";
+    inputTemp.innerText = "Temperatura:";
     retornoCPU.innerHTML = " ";
+    retornoCPU.style.backgroundColor = ' rgb(248, 248, 248)'
     retornoMemoria.innerHTML = " ";
+    retornoMemoria.style.backgroundColor = ' rgb(248, 248, 248)'
     retornoTemp.innerHTML = " ";
+    retornoTemp.style.backgroundColor = ' rgb(248, 248, 248)'
 }
