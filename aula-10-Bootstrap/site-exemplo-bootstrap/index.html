@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+    <!-- data-bs -> acessando uma função da página-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions - Exemplo Bootstrap</title>
+    <!-- bootstrap CDN (Continuos Delivery Network) - pesquisar para achar os links de importação -->
+     <!-- Importação do CSS do Bootstrap -->
+      <!-- O bootstrap só com a importação ele já tira as margins e padding do site e muda a fonte (deixa meio arredondada em comparação à fonte padrão do site), dá pra usar isso pra testar se a importação deu certo -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- Container -->
+     <!-- tem que ser tudo minúsculo o nome das classes -->
+    <div class="container">
+        <header class="text-center mb-5 position-relative">
+
+        <!-- Botão Switch (Canto superior direito) -->
+        <div class="form-check form-switch position-absolute top-0 end-0 mt-2">
+           <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch" checked>
+           <label class="form-check-label" for="themeSwitch">Modo Escuro</label>
+        </div>
+
+            <h1 class="text-primary mt-4 mb-4">TechNova Solutions</h1>
+            <!-- mt (marging top) ou mb (marging botom) - valor em rem -->
+            <p>Soluções tecnológicas modernas com apoio do bootstrap.</p>
+        </header>
+
+
+        <!-- Seção de Cards -->
+
+     <!-- por padrão o bootstrap vem com o layout de linhas com 12 colunas -->
+      <!-- mobile first - o bootstrap sempre prioriza um layout configurado para celular -->
+     <section class="row mb-4">
+
+        <!-- CARD 1-->
+
+        <!-- col-12 (col -> é para qualquer configuração no mobile) -> ta dizendo que no mobile, essa div vai ocupar as 12 colunas para ficar uma só sem um monte de divisão -->
+         <!-- col-md-4 (col-md -> é para qualquer configuração no computador)-> ta dizendo que no computador essa div vai ocupar 4 colunas (vão ficar 3 cards nesse caso) -->
+        <div class="col-12 col-md-4 mb-3">
+            <!-- h-100, w-100-> height: 100%, weight: 100% -->
+            <div class="card h-100 w-100">
+                <div class="card-body">
+                    <h5 class="card-title">Desenvolvimento Web</h5>
+                    <p class="card-text">Criação de sites e sistemas web responsivos com bootstrap.</p>
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Desenvolvimento Web" class="img-thumbnail">
+                    <!-- img-thumbnail -> faz a imagem se adaptar ao tamnho disponível para ela -->
+
+                    <!-- Botão -->
+                    <button class="btn btn-primary mt-3">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100 w-100">
+                <div class="card-body">
+                    <h5 class="card-title">Consultoria Web</h5>
+                    <p class="card-text">Orientação estratégica para soluções digitais.</p>
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Consultoria Web" class="img-thumbnail">
+                    <button class="btn btn-primary mt-3">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100 w-100">
+                <div class="card-body">
+                    <h5 class="card-title">Soluções Digitais</h5>
+                    <p class="card-text">Projetos personalizados para diferentes necessidades.</p>
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Soluções Digitais" class="img-thumbnail">
+                    <button class="btn btn-primary mt-3">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+
+     </section>
+
+     <!-- ALERTA DISPENSÁVEL COM BOOTSTRAP-->
+      <!-- classe alert para ficar um retângulo numa estética de aviso mesmo-->
+       <!-- dismissible - torna a div fechável (ainda não é um botão) -->
+        <!-- fade - faz desparecer, show - faz aparecer -->
+      <div class="alert alert-warning alert-dismissible fade show text-center mb-5">
+        Atenção: esta página é um exemplo didático utilizando o Bootstrap.
+        <!-- BOTÃO DE FECHAR -->
+         <!-- data-bs-sismiss="alert" - faz conseguir apertar o botão para ele sumir, dentro das chaves coloca o nome da classe da div que ele vai fechar-->
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+
+      <!-- FORMULÁRIO COM BOOTSTRAP -->
+       <section class="mb-5">
+        <h3 class="mb-3 border-bottom pb-2">Entre em contato conosco</h3>
+
+        <form>
+            <!-- CAMPO DE NOME -->
+            <div class="mb-3">
+                <!-- form-label -> para formatar/ estilizar a label, form-control -> para formatar/ estilizar o input -->
+                <label for="nomeInput" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nomeInput" placeholder="Digite seu nome">
+            </div>
+
+            <!-- CAMPO DE EMAIL -->
+            <div class="mb-3">
+                <!-- form-label -> para formatar/ estilizar a label, form-control -> para formatar/ estilizar o input -->
+                <label for="emailInput" class="form-label">Email</label>
+                <input type="text" class="form-control" id="emailInput" placeholder="Digite seu email">
+            </div>
+
+            <!-- CAMPO DE MENSAGEM -->
+            <div class="mb-3">
+                <!-- form-label -> para formatar/ estilizar a label, form-control -> para formatar/ estilizar o input -->
+                 <!-- no for="" coloca o nome que quiser, mas tem que ser o mesmo nome do que está no id (para acessibilidade, quando clica na label abilita o input) -->
+                  <!-- a <textarea> é a própria input, ela permite escrever bastante coisa-->
+                    <!-- rows="" alterar o tanto de linhas, aumenta a caixa de texto em questão de altura-->
+                <label for="msgText" class="form-label">Email</label>
+                <textarea class="form-control" id="msgText" placeholder="Como podemos ajudar?" rows="3"></textarea>
+            </div>
+
+            <!-- BOTÃO DE ENVIAR -->
+             <!-- data-bs-toggle=" " - faz aparecer ao invés do dismis que faz desaparecer (dentro do parênteses é nome da class que vai aparecer) -->
+              <!-- data-bs-target=" " - coloca o id do elemento que vai aparacer e que foi colocado no toggle (tem que usar os dois juntos, só funcionam juntos ) -->
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">Enviar Mensagem</button>
+
+        </form>
+
+       </section>
+
+    </div>
+
+    <!-- MODAL FLUTUANTE (fora da div e section pois vai aparecer por cima de todos os elementos) -->
+     <div class="modal fade" id="confirmModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar Envio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                    <div class="modal-body">
+                        Deseja realmente enviar esta mensagem para a equipe da TechNova Solutions?
+                    </div>
+
+                    <div class="modal-footer">
+                    <!-- BOTÃO DE REVISAR -->
+                     <button type="button" class="btn btn-secundary" data-bs-dismis="modal">Revisar</button>
+                     
+                     <!-- BOTÃO DE CONFIRMAR ENVIO -->
+                     <button type="button" class="btn btn-primary" data-bs-dismis="modal">Sim, enviar</button>
+                    </div>
+                
+            </div>
+        </div>
+     </div>
+    
+    <!-- Importação do JavaScript do Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+     <script>
+        //  Script para alternar o tema
+
+        const themeSwitch = document.getElementById("themeSwitch");
+        const htmlElement = document.documentElement; // Pega a tag <html>
+
+        themeSwitch.addEventListener("change", function () {
+        if (this.checked) {
+            htmlElement.setAttribute("data-bs-theme", "dark");
+            this.nextElementSibling.textContent = "Modo Escuro";
+        } else {
+            htmlElement.setAttribute("data-bs-theme", "light");
+            this.nextElementSibling.textContent = "Modo Claro";
+        }
+        });
+
+     </script>
+</body>
+</html>
